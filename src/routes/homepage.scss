@@ -1,0 +1,108 @@
+@use '../responsive.scss'as rs;
+
+.homePage {
+  display: flex;
+  height: 100%;
+
+  .textContainer {
+    display: flex;
+    flex: 3;
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 10%;
+
+      @include rs.md {
+        padding: 0;
+      }
+      h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #151515;
+        margin-bottom: 1rem;
+        @include rs.lg {
+          font-size: 2.5rem;
+        }
+        @include rs.sm {
+          font-size: 2.2rem;
+        }
+      }
+      p {
+        font-size: 1rem;
+        color: #151515;
+        padding-right: 3rem;
+        margin-bottom: 1rem;
+      }
+      .boxes {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 0.5rem;
+
+        @include rs.sm {
+          display: none;
+        }
+        .box {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items:start;
+          width: 30%;
+          padding: 1rem;
+          border-radius: 10px;
+          background-color: #fcf5f3;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease;
+          &:hover {
+            transform: translateY(-10px);
+          }
+          h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #151515;
+            margin-bottom: 0.5rem;
+            @include rs.lg {
+              font-size: 1.5rem;
+            }
+          }
+          h3 {
+            font-size: 1rem;
+            color: #151515;
+            font-weight: lighter;
+            text-align: center;
+            @include rs.lg {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .imgContainer {
+    display: flex;
+    flex: 2;
+    background-color: #fcf5f3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include rs.md {
+      display: none;
+    }
+    @include rs.sm {
+      display: none;
+    }
+    
+    img {
+      width: 115%;
+      position: absolute;
+      right: 0;
+      @include rs.lg {
+        width: 105%;
+      }
+    }
+  }
+}
