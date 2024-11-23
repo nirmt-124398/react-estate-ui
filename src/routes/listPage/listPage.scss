@@ -1,0 +1,47 @@
+.listPage {
+  display: flex;
+  height: 100vh; // Full viewport height
+
+  .listContainer {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    height: 100%; // Full height to support flex child growth
+
+    .wrapper {
+      padding-right: 50px;
+      padding-bottom: 120px; // Add padding to prevent last item from getting cut off
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      overflow-y: auto; // Enables scrolling for overflow
+
+      flex-grow: 1; // Allows wrapper to grow and occupy available space
+
+      // Custom scrollbar styles
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    }
+  }
+
+  .mapContainer {
+    flex: 2;
+    background-color: #fcf5f3;
+    height: 100%;
+  }
+}

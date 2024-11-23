@@ -1,0 +1,50 @@
+.filter {
+    input-security:auto;
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+  }
+
+  input,select {
+    width: 100px;
+    padding: 5px 10px;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .top {
+    input {
+      width: 100%;
+    }
+  }
+  .bottom {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 1rem;
+    label {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    
+
+    button{
+        padding: 0.5rem 2rem;
+        background-color: #fece51;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        img{
+            width: 1rem;
+            height: 1rem;
+        }
+  }
+}
+}

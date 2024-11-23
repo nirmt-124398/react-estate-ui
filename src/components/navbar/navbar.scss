@@ -6,14 +6,14 @@ nav {
   justify-content: space-between;
   align-items: center;
 
-  a{
+  a {
     transition: all 0.3s ease;
 
     @include responsive.sm {
       display: none;
     }
 
-    &:hover{
+    &:hover {
       scale: 1.1;
     }
   }
@@ -28,11 +28,11 @@ nav {
       display: flex;
       align-items: center;
       gap: 10px;
-      img{
+      img {
         width: 30px;
       }
 
-      span{
+      span {
         @include responsive.md {
           display: none;
         }
@@ -56,61 +56,105 @@ nav {
     @include responsive.sm {
       background-color: transparent;
     }
+    .userInfo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      img {
+      width: 50px;
+      height: 45px;
+      border-radius: 50%;
+      object-fit: cover;
+      }
+      span {
+      font-weight: bold;
+      }
+      a {
+        position: relative;
+      text-decoration: none;
+      color: #000;
+      padding: 15px 25px;
+      border-radius: 5px;
+      background-color: #fece51;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 10px;
 
-    a{
-        text-decoration: none;
-        color: #000;
-        padding: 10px 20px;
-        border-radius: 5px;
-        transition: all 0.3s ease;
-        margin: 10px;
-        
-    }
-    .register{
-        background-color: #fece51;
-    }
-    .menuIcon{
-        display: none;
-        z-index: 1;
-        img{
-            width: 36px;
-            height: 36px;
-            cursor: pointer;
-        }
-        @include responsive.sm {
-            display: inline;
-        }
+      &:hover {
+        background-color: #f0b429;
+      }
 
-    }
-    .menu{
-        position: absolute;
-        background-color: black;
-        color: white;
-        height: 100vh;
-        width: 50%;
-        top: 0;
-        right: -80%;
-        transition: all 0.5s ease;
+      .notification {
+        background-color: red;
+        color: rgb(255, 255, 255);
+        border-radius: 50%;
+        padding: 5px;
+        font-size: 12px;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
         align-items: center;
-        font-size: x-large;
-        &.active{
-            right: 0;
+        justify-content: center;
+        position: absolute;
+        right: -10px;
+        top: -10px;
+      }
+      }
+
+      @include responsive.sm {
+        display: none;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+      margin: 10px;
+    }
+    .register {
+      background-color: #fece51;
+    }
+    .menuIcon {
+      display: none;
+      z-index: 1;
+      img {
+        width: 36px;
+        height: 36px;
+        cursor: pointer;
+      }
+      @include responsive.sm {
+        display: inline;
+      }
+    }
+    .menu {
+      position: absolute;
+      background-color: black;
+      color: white;
+      height: 100vh;
+      width: 50%;
+      top: 0;
+      right: -80%;
+      transition: all 0.5s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: x-large;
+      &.active {
+        right: 0;
+      }
+      @include responsive.sm {
+        a {
+          display: initial;
+          padding: 20px;
+          color: white;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
         }
-        @include responsive.sm {
-            a{
-                display: initial;
-                padding: 20px;
-                color: white;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                
-            }
-        }
-    } 
+      }
+    }
   }
 }
